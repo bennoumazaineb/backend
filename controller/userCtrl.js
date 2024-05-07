@@ -207,23 +207,23 @@ const resetPassword = asyncHandler(async (req, res) => {
 
 
 
-
 const getAllEmployeesWithLessThanTenTasks = async (req, res) => {
   try {
-      // Recherche tous les employés avec moins de 10 tâches
-    
-      const employees = await User.find({ role: "employee", tasks: { $lt: 10 } });
+    // Récupérer tous les utilisateurs avec le rôle "employee"
+    const employees = await User.find({ role: "employee" });
 
-   
-console.log(employees)
-      // Renvoie les employés filtrés en tant que réponse JSON
-      res.json(employees);
+    // Filtrer les employés ayant moins de 10 tâches
+    const filteredEmployees = employees.filter(employee => employee.tasks < 10);
+
+    // Envoyer les employés filtrés en tant que réponse JSON
+    res.json(filteredEmployees);
   } catch (error) {
-      // Gestion des erreurs
-      console.error(error);
-      res.status(500).json({ message: "Une erreur s'est produite lors de la récupération des employés." });
+    // Gestion des erreurs
+    console.error(error);
+    res.status(500).json({ message: "Une erreur s'est produite lors de la récupération des employés." });
   }
 };
+
 
 
 
