@@ -212,8 +212,8 @@ const getAllEmployeesWithLessThanTenTasks = async (req, res) => {
   try {
       // Recherche tous les employés avec moins de 10 tâches
     
-      // Filtre les employés avec moins de 10 tâches
-      const employees = await User.find({ role: "employee", $where: "this.tasks < 10" });
+      const employees = await User.find({ role: "employee", tasks: { $lt: 10 } });
+
    
 console.log(employees)
       // Renvoie les employés filtrés en tant que réponse JSON
