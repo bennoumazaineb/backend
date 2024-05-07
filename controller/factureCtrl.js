@@ -100,5 +100,7 @@ const updateFacturePaymentStatus = asyncHandler(async (req, res, next) => {
     }
 });
 
+  
+
 
 module.exports = { createFacture ,getAllFacture,deleteFacture,updateFacturePaymentStatus};

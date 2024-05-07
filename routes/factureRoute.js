@@ -6,4 +6,6 @@ router.post("/register", createFacture);
 router.get("/all", getAllFacture);
 router.delete("/:id", deleteFacture);
 router.put('/factures/:id', updateFacturePaymentStatus);
+
+
 module.exports = router;
