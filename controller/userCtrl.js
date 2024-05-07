@@ -53,7 +53,7 @@ Poste,
 
 
 const sendWelcomeEmail = async (email, password) => {
-  const loginURL = `http://localhost:3000/auth/login`;
+  const loginURL = `https://gedproject.site/auth/login`;
 
   // Construction de l'URL de connexion
   const data = {
@@ -383,7 +383,7 @@ const forgotPasswordToken = asyncHandler(async (req, res) => {
     try {
         const token = await user.createPasswordResetToken();
         await user.save();
-        const resetURL = `Hi, Please follow this link to reset Your Password. This link is valid till 10 minutes from now. <a href='http://localhost:3000/auth/reset-password/${token}/${email}''>Click Here</>`;
+        const resetURL = `Hi, Please follow this link to reset Your Password. This link is valid till 10 minutes from now. <a href='https://gedproject.site/auth/reset-password/${token}/${email}''>Click Here</>`;
         const data = {
             to: email,
             text: "Hey User",

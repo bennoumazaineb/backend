@@ -13,8 +13,8 @@ module.exports = {
         amount: req.body.amount,
         accept_card: true,
         session_timeout_secs: 1200,
-        success_link: "http://localhost:3000/success",
-        fail_link: "http://localhost:3000/fail",
+        success_link: "https://gedproject.site/success",
+        fail_link: "https://gedproject.site/fail",
         developer_tracking_id: "f4329b11-fe3f-4ab5-84af-702c30fce808",
       };
 
