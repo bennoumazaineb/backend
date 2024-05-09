@@ -11,7 +11,7 @@ const recRoute = require("./routes/recRoute");
 const taskRoute = require("./routes/taskRoute");
 const ReuRoute = require("./routes/ReuRouter");
 const TemplateRoute = require("./routes/templateRoute");
-const form = require("./routes/formulaireRoute");
+const upload2 = require("./routes/upload2");
 const historiqueRouter =require("./routes/historiqueRoute")
 const Reunion1Router=require("./routes/reu1Route")
 const app = express();
@@ -36,6 +36,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use("/api/avis", avisRoute);
 app.use("/api/reu1", Reunion1Router);
+app.use("/api/upload2", upload2);
 app.use("/api/facture", factureRoute);
 app.use("/api/payment", payementRoute);
 // Routes pour l'authentification des utilisateurs
