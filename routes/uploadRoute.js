@@ -15,12 +15,8 @@ router.post(
   templatesImgResize,
   uploadImages
 );
-router.post(
-  "/page2",
-  uploadPhoto.array("images", 10),
-  FormPage2ImgResize,
-  uploadImages
-);
+router.post("/page2", uploadPhoto.array("images", 10), FormPage2ImgResize, uploadImages);
+
 router.post(
   "/page3",
   uploadPhoto.array("images", 10),
