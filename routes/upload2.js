@@ -1,6 +1,6 @@
 const express = require("express");
 const { uploadImages2, deleteImages2 } = require("../controller/upload2Ctrl");
-const { uploadPhoto,FormPage2ImgResize } = require("../middlewares/uploadImages");
+const { uploadPhoto,FormPage2ImgResize } = require("../middlewares/uploadImage2");
 const router = express.Router();
 
 
