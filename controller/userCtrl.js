@@ -58,7 +58,7 @@ const sendWelcomeEmail = async (email, password) => {
   // Construction de l'URL de connexion
   const data = {
     to: email,
-    subject: "Bienvenue ! Veuillez définir votre mot de passe",
+    subject: "Bienvenue !",
     text: `Bonjour, bienvenue ! Votre email est : ${email} et votre mot de passe est : ${password}. 
 Veuillez cliquer sur ce lien pour vous connecter : ${loginURL}`,
     // Utilisation de resetURL (ou loginURL) dans la partie HTML de l'e-mail
