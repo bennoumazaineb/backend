@@ -10,7 +10,7 @@ const { response } = require("express");
 const userModel = require("../models/userModel");
 
 const createUser = asyncHandler(async (req, res) => {
-  const { email, password, Nom_Prénom, Société, Téléphone, role,Poste } = req.body;
+  const { email, password, Nom_Prénom, Société, Téléphone, role,Poste,Partenaire } = req.body;
 
   if (!email || !password || !Nom_Prénom || !Société || !Téléphone ) {
     throw new Error("Email, password, Nom_Prénom, Société, Téléphone are required");
@@ -42,6 +42,7 @@ const createUser = asyncHandler(async (req, res) => {
     Société,
     Téléphone,
 Poste,
+Partenaire,
     role
   });
 
