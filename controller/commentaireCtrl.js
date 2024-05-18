@@ -21,7 +21,7 @@ const getallCommentaire = asyncHandler(async (req, res, next) => {
     }
 });
 
-const deleteRec = asyncHandler(async (req, res) => {
+const deleteCommentaire = asyncHandler(async (req, res) => {
     const { id } = req.params;
     validateMongoDbId(id);
   
@@ -35,4 +35,4 @@ const deleteRec = asyncHandler(async (req, res) => {
     }
 });
 
-module.exports = { createCommentaire, deleteRec, getallCommentaire };
+module.exports = { createCommentaire, deleteCommentaire, getallCommentaire };
