@@ -25,8 +25,8 @@ const reunionSchema = new Schema({
     },
     Proposition:{
         type: String,
-        enum: ['refusé', 'accepté'], // Définir les valeurs autorisées pour le champ type
-        default: 'refusé' // Valeur par défaut
+        enum: ['refusée', 'acceptée'], // Définir les valeurs autorisées pour le champ type
+        default: 'refusée' // Valeur par défaut
     },
     
    

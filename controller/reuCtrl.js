@@ -69,18 +69,18 @@ const updatePropositionRefusedToAccepted = asyncHandler(async (req, res, next) =
 
         // Mettre à jour en fonction de l'état actuel
         let updatedProposition;
-        if (currentProposition === 'refusé') {
+        if (currentProposition === 'refusée') {
             // Mettre à jour à "accepté"
             updatedProposition = await reunionModel.findByIdAndUpdate(
                 id,
-                { Proposition: 'accepté' },
+                { Proposition: 'acceptée' },
                 { new: true } // Pour renvoyer le document mis à jour
             );
-        } else if (currentProposition === 'accepté') {
+        } else if (currentProposition === 'acceptée') {
             // Mettre à jour à "refusé"
             updatedProposition = await reunionModel.findByIdAndUpdate(
                 id,
-                { Proposition: 'refusé' },
+                { Proposition: 'refusée' },
                 { new: true } // Pour renvoyer le document mis à jour
             );
         } else {
